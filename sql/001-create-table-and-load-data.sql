@@ -6,5 +6,5 @@ CREATE TABLE names (
   PRIMARY KEY(id)
 );
 
-INSERT INTO name (id, name) VALUES (1, "nagata");
-INSERT INTO name (id, name) VALUES (2, "tanaka");
+INSERT INTO names (id, name) VALUES (1, "nagata");
+INSERT INTO names (id, name) VALUES (2, "tanaka");
