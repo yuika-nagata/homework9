@@ -10,20 +10,20 @@ import java.util.Optional;
 @RestController
 public class NameController {
 
-    private final NameMapper nameMapper;
+    private final NameService nameService;
 
-    public NameController(NameMapper nameMapper) {
-        this.nameMapper = nameMapper;
+    public NameController(NameService nameService) {
+        this.nameService = nameService;
     }
 
     @GetMapping("/names")
-    public List<Name> getName(){
-        List<Name> names=nameMapper.findAll();
-        return names;
+    public List<Name> getNames() {
+        return nameService.findAll();
+
     }
+
     @GetMapping("/{id}")
-    public Optional<Name> getUser(@RequestParam("id")int id){
-        Optional<Name> users=nameMapper.findById(id);
-        return users;
+    public Optional<Name> getUser(@RequestParam("id") int id) {
+        return nameService.findById(id);
     }
 }
