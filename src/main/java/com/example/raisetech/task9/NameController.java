@@ -7,14 +7,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Optional;
 
+
 @RestController
 public class NameController {
 
     private final NameService nameService;
 
     public NameController(NameService nameService) {
-        this.nameService = nameService;
+        this.nameService =nameService ;
     }
+
 
     @GetMapping("/names")
     public List<Name> getNames() {
@@ -22,7 +24,7 @@ public class NameController {
 
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/names/{id}")
     public Optional<Name> getUser(@RequestParam("id") int id) {
         return nameService.findById(id);
     }

@@ -8,5 +8,4 @@ public interface NameService {
 
     Optional<Name> findById(int id);
 
-
 }

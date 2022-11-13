@@ -1,8 +1,8 @@
 package com.example.raisetech.task9;
 
 public class Name {
-    private String id;
-    private String name;
+    private final String id;
+    private final String name;
 
 
     public Name(String id, String name) {

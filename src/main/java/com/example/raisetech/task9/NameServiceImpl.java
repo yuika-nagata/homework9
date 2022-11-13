@@ -8,19 +8,19 @@ import java.util.Optional;
 @Service
 public class NameServiceImpl implements NameService {
 
-    private NameMapper nameMapper;
+    private final NameMapper nameMapper;
 
     public NameServiceImpl(NameMapper nameMapper) {
         this.nameMapper = nameMapper;
     }
 
     @Override
-    public List<Name> findAll() {return nameMapper.findAll();
+    public List<Name> findAll() {
+        return nameMapper.findAll();
     }
 
     @Override
     public Optional<Name> findById(int id) {
-        Optional<Name> users = nameMapper.findById(id);
-        return users;
+        return nameMapper.findById(id);
     }
 }
