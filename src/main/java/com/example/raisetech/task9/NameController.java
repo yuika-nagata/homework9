@@ -1,6 +1,7 @@
 package com.example.raisetech.task9;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,7 +26,7 @@ public class NameController {
     }
 
     @GetMapping("/names/{id}")
-    public Optional<Name> getUser(@RequestParam("id") int id) {
+    public Optional<Name> getUser(@PathVariable("id") int id) {
         return nameService.findById(id);
     }
 }
