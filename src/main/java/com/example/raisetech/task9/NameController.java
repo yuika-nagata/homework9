@@ -15,14 +15,13 @@ public class NameController {
     private final NameService nameService;
 
     public NameController(NameService nameService) {
-        this.nameService =nameService ;
+        this.nameService = nameService;
     }
 
 
     @GetMapping("/names")
     public List<Name> getNames() {
         return nameService.findAll();
-
     }
 
     @GetMapping("/names/{id}")
