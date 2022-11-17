@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Optional;
 
-
 @RestController
 public class NameController {
 
@@ -17,8 +16,7 @@ public class NameController {
     public NameController(NameService nameService) {
         this.nameService = nameService;
     }
-
-
+    
     @GetMapping("/names")
     public List<Name> getNames() {
         return nameService.findAll();
